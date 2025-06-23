@@ -1,0 +1,9 @@
+steps:
+  - name: "ghcr.io/opentofu/opentofu:latest"
+    entrypoint: "sh"
+    args:
+      - "-c"
+      - |
+        cd infra
+        tofu init
+        tofu apply -auto-approve
