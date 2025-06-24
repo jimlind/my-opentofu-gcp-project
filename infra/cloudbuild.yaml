@@ -7,7 +7,7 @@ steps:
     args:
       - "-c"
       - |
-        cd stacks/compute
+        cd infra/stacks/compute
         tofu init
         tofu destroy -auto-approve
         tofu apply -auto-approve
@@ -17,7 +17,7 @@ steps:
     args:
       - "-c"
       - |
-        cd stacks/disks
+        cd infra/stacks/disks
         tofu init
         tofu destroy -auto-approve
         tofu apply -auto-approve
@@ -27,7 +27,7 @@ steps:
     args:
       - "-c"
       - |
-        cd stacks/firestore
+        cd infra/stacks/firestore
         tofu init
         tofu destroy -auto-approve
         tofu apply -auto-approve
