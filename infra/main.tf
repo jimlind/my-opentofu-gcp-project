@@ -10,3 +10,10 @@ resource "google_compute_disk" "example_disk" {
   zone  = "us-central1-a"
   size  = 10
 }
+
+resource "google_compute_disk" "example_disk_also" {
+  name  = "example-disk-too"
+  type  = "pd-standard"
+  zone  = "us-central1-a"
+  size  = 10
+}
