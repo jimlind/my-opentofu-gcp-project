@@ -4,9 +4,9 @@ provider "google" {
 }
 
 resource "google_firestore_database" "default" {
-  name     = "(default)"
-  location = "nam5"
-  type     = "NATIVE"
+  name        = "(default)"
+  location_id = "nam5"
+  type        = "NATIVE"
 
   lifecycle {
     prevent_destroy = true
