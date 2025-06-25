@@ -1,5 +1,6 @@
 options:
   logging: CLOUD_LOGGING_ONLY
+  serviceAccount: projects/395010938272/serviceAccounts/general-service-account@opentofu-test-project.iam.gserviceaccount.com
 
 steps:
   - name: "ghcr.io/opentofu/opentofu:latest"
