@@ -3,12 +3,11 @@ provider "google" {
   region  = "us-central1"
 }
 
-resource "google_firestore_database" "default" {
+resource "google_firestore_database" "database" {
+  project     = opentofu-test-project
   name        = "(default)"
-  location_id = "nam5"
+  location_id = "us-central1"
   type        = "FIRESTORE_NATIVE"
 
-  lifecycle {
-    prevent_destroy = true
-  }
+  depends_on = [google_project_service.firestore]
 }
