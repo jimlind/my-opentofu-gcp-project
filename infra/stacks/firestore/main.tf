@@ -8,6 +8,4 @@ resource "google_firestore_database" "database" {
   name        = "(default)"
   location_id = "us-central1"
   type        = "FIRESTORE_NATIVE"
-
-  depends_on = [google_project_service.firestore]
 }
