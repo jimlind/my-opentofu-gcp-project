@@ -4,7 +4,7 @@ provider "google" {
 }
 
 resource "google_firestore_database" "database" {
-  project     = opentofu-test-project
+  project     = "opentofu-test-project"
   name        = "(default)"
   location_id = "us-central1"
   type        = "FIRESTORE_NATIVE"
