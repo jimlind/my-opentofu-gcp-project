@@ -3,6 +3,13 @@ options:
   serviceAccount: projects/395010938272/serviceAccounts/general-service-account@opentofu-test-project.iam.gserviceaccount.com
 
 steps:
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud auth list
+        gcloud config list account
   - name: "ghcr.io/opentofu/opentofu:latest"
     entrypoint: "sh"
     args:
